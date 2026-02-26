@@ -23,7 +23,8 @@ const rl = readline.createInterface({
 })
 rl.setPrompt("> ")
 
-function ask() {
+// Start input on the bot spawn
+bot.once("spawn", () => {
     // Prompt the user
     rl.prompt()
 
@@ -43,11 +44,6 @@ function ask() {
         bot.chat(text)
         rl.prompt()
     })
-}
-
-// Start input on bot spawn
-bot.once("spawn", () => {
-    ask()
 })
 
 // Output
