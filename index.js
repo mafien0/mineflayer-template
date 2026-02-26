@@ -1,4 +1,4 @@
-const { config } = require("./config.json")
+const config = require("./config.json")
 const mineflayer = require("mineflayer")
 const readline = require("readline")
 
