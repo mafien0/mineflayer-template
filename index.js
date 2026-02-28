@@ -68,13 +68,13 @@ function connect() {
         }
 
         if (reasonJSON?.type === "compound") {
-            if (reasonJSON?.value?.translate.value === "multiplayer.disconnect.banned") {
+            if (reasonJSON?.value?.translate?.value === "multiplayer.disconnect.banned") {
                 error("You got banned!")
                 if (bot) bot.stop()
                 process.exit(1)
             }
 
-            if (reasonJSON?.value?.translate.value === "multiplayer.disconnect.kicked") {
+            if (reasonJSON?.value?.translate?.value === "multiplayer.disconnect.kicked") {
                 error("You got kicked with no reason specified!")
             }
         }
